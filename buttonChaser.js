@@ -3,8 +3,9 @@ var aWidth
 var aHeight;
 var timer;
 var iterations = 0; //basically count the number of frames , ends at 30 frames/seconds 
-
+window.addEventListener('touchstart',alert("IOS clicks."));
 window.addEventListener('load', setGameAreaBounds);
+
 
 function setGameAreaBounds() {
     aWidth = innerWidth;
