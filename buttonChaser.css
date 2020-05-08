@@ -37,3 +37,9 @@
     height: 64px;
 
 }
+#footer
+{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10px;
+}
