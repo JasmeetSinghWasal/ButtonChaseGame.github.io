@@ -8,7 +8,7 @@ var iterations = 0; //basically count the number of frames , ends at 30 frames/s
 var counter = 0;
 var imgArray = new Array();
 
-window.addEventListener('load', setGameAreaBounds);
+window.addEventListener('load', fillBallAnimationArray);
 
 function setGameAreaBounds() {
     aWidth = innerWidth;
@@ -22,11 +22,7 @@ function setGameAreaBounds() {
     aWidth -= 74;
     aHeight -= 74;
     moveDot(); //game loop
-
-    alert('aniate start');
-    fillBallAnimationArray();
-    
-    alert("done");
+    //fillBallAnimationArray();
 }
 
 function detectHit() {
