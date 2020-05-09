@@ -8,7 +8,7 @@ var imgArray = new Array();
 
 window.addEventListener('load', setGameAreaBounds);
 
-window.addEventListener('load', animateBall);
+window.addEventListener('load', animateBallCall);
 
 
 function setGameAreaBounds() {
@@ -53,7 +53,7 @@ function moveDot() {
 }
 
 //animate ball
-function animateBall() {
+function animateBallCall() {
 
     for (var i = 0; i < 24; i++) {
         imgArray[i] = new Image();
