@@ -40,9 +40,7 @@
 }
 
 #myfooter {
-    position: absolute;
     float: right;
-    top:150px;
     font-family: Arial, Helvetica, sans-serif;
     height: 10px;
 }
