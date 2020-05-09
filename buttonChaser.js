@@ -11,7 +11,7 @@ var imgArray = new Array();
 window.addEventListener('load', fillBallAnimationArray);
 
 
-function setGameAreaBounds() {
+function setGameAreaBounds() { 
     aWidth = innerWidth;
     aHeight = innerHeight;
     aWidth -= 22;
