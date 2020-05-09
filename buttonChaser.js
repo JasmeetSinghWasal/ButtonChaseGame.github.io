@@ -9,7 +9,7 @@ var counter = 0;
 var imgArray = new Array();
 
 window.addEventListener('load', fillBallAnimationArray);
-setTimeout('animateBall',50);
+
 
 function setGameAreaBounds() {
     aWidth = innerWidth;
@@ -70,6 +70,7 @@ function animateBall()
     document.getElementById('animeBall').src = imgArray[counter].src; 
     alert(counter);
     counter++;   
+    setTimeout('animateBall',50);
     
     
 }
