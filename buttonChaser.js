@@ -4,11 +4,7 @@ var aHeight;
 var timer;
 var iterations = 0; //basically count the number of frames , ends at 30 frames/seconds 
 
-//for animation
-var counter = 0;
-var imgArray = new Array();
-
-window.addEventListener('load', fillBallAnimationArray);
+window.addEventListener('load', setGameAreaBounds);
 
 
 function setGameAreaBounds() { 
@@ -23,7 +19,7 @@ function setGameAreaBounds() {
     aWidth -= 74;
     aHeight -= 74;
     moveDot(); //game loop
-    //fillBallAnimationArray();
+   
 } 
 
 function detectHit() {
@@ -51,26 +47,4 @@ function moveDot() {
     }
     iterations++;
 
-}
-
-//animate ball
-function fillBallAnimationArray() {
-    for (var i = 0; i < 24; i++) {
-        imgArray[i] = new Image();
-        imgArray[i].src = "images/ball" + i + ".gif";
-        }
-        animateBall();
-}
-function animateBall()
-{   if(counter > imgArray.length -1)
-    {
-    counter = 0;
-    alert("counter exceeds:"+counter);
-    }
-    document.getElementById('animeBall').src = imgArray[counter].src; 
-    alert(counter);
-    counter++;   
-    setTimeout('animateBall()',50);
-    
-    
 }
