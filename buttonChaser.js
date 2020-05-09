@@ -4,7 +4,11 @@ var aHeight;
 var timer;
 var iterations = 0; //basically count the number of frames , ends at 30 frames/seconds 
 
+var imgArray = new Array();
+
 window.addEventListener('load', setGameAreaBounds);
+
+window.addEventListener('load', animateBall);
 
 
 function setGameAreaBounds() {
@@ -12,8 +16,8 @@ function setGameAreaBounds() {
     aHeight = innerHeight;
     aWidth -= 22;
     aHeight -= 97;
-    document.getElementById('gameArea').style.width = aWidth  +'px';
-    document.getElementById('gameArea').style.height = aHeight  +'px';
+    document.getElementById('gameArea').style.width = aWidth + 'px';
+    document.getElementById('gameArea').style.height = aHeight + 'px';
 
     document.getElementById('dot').addEventListener('click', detectHit);
     aWidth -= 74;
@@ -21,7 +25,7 @@ function setGameAreaBounds() {
     moveDot(); //game loop
 }
 
-function detectHit() {      
+function detectHit() {
     score += 1;
     document.getElementById('scoreLabel').innerHTML = "Score :" + score;
 }
@@ -46,4 +50,23 @@ function moveDot() {
     }
     iterations++;
 
+}
+
+//animate ball
+function animateBall() {
+
+    for (var i = 0; i < 24; i++) {
+        imgArray[i] = new Image();
+        imgArray[i].src = "images/ball" + i + ".gif";
+        rotateBall(i);
+        i++;
+    }
+
+}
+
+function rotateBall(counter) {
+    if (counter > imgArray.length - 1) {
+        counter = 0;
+        document.getElementById('animateBall').src = imgArray[counter].src;
+    }
 }
