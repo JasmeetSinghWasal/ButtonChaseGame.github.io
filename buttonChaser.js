@@ -9,6 +9,7 @@ var counter = 0;
 var imgArray = new Array();
 
 window.addEventListener('load', fillBallAnimationArray);
+setTimeout('animateBall',50);
 
 function setGameAreaBounds() {
     aWidth = innerWidth;
@@ -23,7 +24,7 @@ function setGameAreaBounds() {
     aHeight -= 74;
     moveDot(); //game loop
     //fillBallAnimationArray();
-}
+} 
 
 function detectHit() {
     score += 1;
@@ -57,15 +58,18 @@ function fillBallAnimationArray() {
     for (var i = 0; i < 24; i++) {
         imgArray[i] = new Image();
         imgArray[i].src = "images/ball" + i + ".gif";
-        alert(imgArray[i].src);
         }
         animateBall();
 }
 function animateBall()
 {   if(counter > imgArray.length -1)
+    {
     counter = 0;
+    alert("counter exceeds:"+counter);
+    }
     document.getElementById('animeBall').src = imgArray[counter].src; 
+    alert(counter);
     counter++;   
-    setTimeout('animateBall',50);
+    
     
 }
