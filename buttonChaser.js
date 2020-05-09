@@ -70,7 +70,7 @@ function animateBall()
     document.getElementById('animeBall').src = imgArray[counter].src; 
     alert(counter);
     counter++;   
-    setTimeout('animateBall',50);
+    setTimeout('animateBall()',50);
     
     
 }
