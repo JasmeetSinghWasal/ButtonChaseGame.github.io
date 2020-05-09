@@ -61,7 +61,7 @@ function fillBallAnimationArray() {
     for (var i = 0; i < 24; i++) {
         imgArray[i] = new Image();
         imgArray[i].src = "images/ball" + i + ".gif";
-        Console.log(imgArray[i].src);
+        alert(imgArray[i].src);
         }
         animateBall();
 }
